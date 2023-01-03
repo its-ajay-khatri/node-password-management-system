@@ -134,6 +134,7 @@ router.post('/signup',checkUsername, checkEmail, function(req, res, next) {
       userModule.find({}, function (err, data) { //find({}) will find all the datas from database and store it in employee
         if (!err) {
           res.render('signup', { title: 'Password Management System', success: "User Registered Successfully" });
+          res.redirect('/dashboard');
         } else {
             throw err;
         }
