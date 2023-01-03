@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 //mongoose.set('strictQuery', false);
-mongoose.connect('mongodb+srv://mongoadmin5:64YfbrLoMxDlG6xK@cluster0.xmgxxz3.mongodb.net/pms?retryWrites=true&w=majority', {useNewUrlParser: true});
+mongoose.connect(process.env.DB_LINK, {useNewUrlParser: true});
 
 var conn = mongoose.connection;           //creating connection object
 
