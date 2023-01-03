@@ -239,7 +239,7 @@ router.post('/add-new-category',checkLoginUser, [check('passwordCategory', 'Ente
 
     passcatDetails.save((err, doc) => {
       if(err) { console.log(err.message); }
-      res.render('addNewCategory', { title: 'Password Management System', loginUser: loginUser, errors: '', success:'Password category inserted successfully' });
+      res.render('addNewCategory', { title: 'Password Management System', loginUser: loginUser, errors: '', success:'Password category inserted successfully!!!!' });
     })
   }
 });
